@@ -1,2 +1,2 @@
-# My_Hangman_game_project
+# My_Hangman_Game_Project
 Создание проекта игры "Виселица" (также "Балда")
