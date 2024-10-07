@@ -1,5 +1,7 @@
+import GetWord.WorkWithFile;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        WorkWithFile file = new WorkWithFile("src/GetWord/words.txt");
     }
 }
