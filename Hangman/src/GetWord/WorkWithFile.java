@@ -4,11 +4,10 @@ import java.io.*;
 import java.util.Random;
 
 public class WorkWithFile {
-    private String path;
+    private String path = "src/GetWord/words.txt";
 
-    public WorkWithFile(String path) {
-        this.path = path;
-    }
+    public WorkWithFile(){};
+    public WorkWithFile(String path) {this.path = path;}
 
     public String getPath() {
         return path;
