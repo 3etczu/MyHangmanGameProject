@@ -1,6 +1,7 @@
 package GetWord;
 
 import java.io.*;
+import java.util.Random;
 
 public class WorkWithFile {
     private String path;
@@ -22,8 +23,8 @@ public class WorkWithFile {
         try (BufferedReader file = new BufferedReader(new FileReader(this.path))){
             String word;
             int countWords = 0;
-            while((word = file.readLine())!=null) {
-                countWords++;
+            while ((word = file.readLine()) != null) {
+                if (word.length() >= 4){countWords++;}
             }
             result = countWords;
         }
@@ -33,20 +34,28 @@ public class WorkWithFile {
         return result;
     }
 
-    public void createArrayOfWords(){
+    public String[] createArrayOfWords(){
         int countWords = countWordsInFile();
         try (BufferedReader file = new BufferedReader(new FileReader(this.path))){
             if (countWords <= 0) throw new Exception("Ошибка чтения файла или файл пуст");
+            String word;
             String[] words = new String[countWords];
-            for (int i = 0; i < countWords; i++) {
-                words[i] = file.readLine();
+            int k = 0;
+            while ((word = file.readLine()) != null){
+                if (word.length() >= 4){
+                    words[k] = word;
+                    k++;
+                }
             }
-            for (int i = 0; i < countWords; i++) {
-                System.out.println(words[i]);
-            }
+            return words;
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());
+            return new String[]{""};
         }
+    }
+
+    public String getRandomWord() {
+        return createArrayOfWords()[new Random().nextInt(countWordsInFile())];
     }
 }
