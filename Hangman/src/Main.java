@@ -12,7 +12,6 @@ public class Main {
             Scanner in = new Scanner(System.in);
             String line = in.nextLine();
             if (line.equals("Y")){
-                System.out.println(file1.getRandomWord());
                 Game.runGame();
                 System.exit ( 0 );
             }
