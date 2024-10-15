@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Random;
 
 public class WorkWithFile {
-    private String path = "src/GetWord/words.txt";
+    private String path = "src/Game/words.txt";
 
     public WorkWithFile(){};
     public WorkWithFile(String path) {this.path = path;}
