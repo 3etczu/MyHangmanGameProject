@@ -1,4 +1,4 @@
-package GetWord;
+package Game;
 
 import java.io.*;
 import java.util.Random;

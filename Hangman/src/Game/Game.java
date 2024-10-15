@@ -1,4 +1,4 @@
-package GetWord;
+package Game;
 
 import java.util.Scanner;
 
@@ -13,22 +13,6 @@ public class Game {
         System.out.printf("Ваше слово из %d букв: \n", lenWord);
         System.out.printf("Слово: %-20s" + "Ошибки: %s \n", buildStr, buildErrorStr);
         System.out.print("Введите букву: ");
-    }
-
-    public static void clearScreen(String... arg) {
-//        try {
-//            final String os = System.getProperty("os.name");
-//
-//            if (os.contains("Windows")) {
-//                Runtime.getRuntime().exec("cls");
-//            }
-//            else {
-//                Runtime.getRuntime().exec("clear");
-//            }
-//        }
-//        catch (final Exception e) {
-//            System.out.println("Невозможно очистить консоль");
-//        }
     }
 
     public static void runGame() {
@@ -62,15 +46,14 @@ public class Game {
 
             if (buildStr.toString().equals(unknownWord)){
                 ker = false;
-                System.out.printf("Поздравляем! Вы выиграли!\nЗагаданное слово: %s",buildStr.toString());
+                System.out.printf("Поздравляем! Вы выиграли!\nЗагаданное слово: %s \n",buildStr.toString());
             } else if (buildErrorStr.toString().length() > 4) {
                 ker = false;
-                System.out.printf("Вы проиграли!\nЗагаданное слово: %s", unknownWord);
+                System.out.printf("Вы проиграли!\nЗагаданное слово: %s \n", unknownWord);
             }
             else {
                 printText(lenWord, buildStr, buildErrorStr);
             }
         }
-//        return word.getRandomWord();
     }
 }
