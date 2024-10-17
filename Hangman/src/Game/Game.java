@@ -1,5 +1,7 @@
 package Game;
 
+import Drawing.Drawing;
+
 import java.util.Scanner;
 
 public class Game {
@@ -23,6 +25,7 @@ public class Game {
         StringBuilder buildErrorStr = new StringBuilder();
         System.out.println(unknownWord);
         Scanner inputUser = new Scanner(System.in);
+        Drawing.readFile(buildErrorStr.toString());
         printText(lenWord, buildStr, buildErrorStr);
         boolean ker = true;
         while (ker){
@@ -52,6 +55,7 @@ public class Game {
                 System.out.printf("Вы проиграли!\nЗагаданное слово: %s \n", unknownWord);
             }
             else {
+                Drawing.readFile(buildErrorStr.toString());
                 printText(lenWord, buildStr, buildErrorStr);
             }
         }

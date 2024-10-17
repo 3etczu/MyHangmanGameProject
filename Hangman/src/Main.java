@@ -10,7 +10,6 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String line = in.nextLine();
         boolean flag = true;
-        Drawing.readFile();
         while (flag) {
             if (line.equals("Y")) {
                 Game.runGame();
