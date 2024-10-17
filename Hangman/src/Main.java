@@ -19,6 +19,7 @@ public class Main {
                 System.exit ( 0 );
             } else {
                 System.out.println("Введена неверная команда. Введите Y или N для продолжения");
+                line = in.nextLine();
             }
         }
     }
