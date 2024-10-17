@@ -1,4 +1,3 @@
-import Drawing.Drawing;
 import Game.Game;
 
 import java.util.Scanner;
@@ -19,6 +18,7 @@ public class Main {
                 System.exit ( 0 );
             } else {
                 System.out.println("Введена неверная команда. Введите Y или N для продолжения");
+                line = in.nextLine();
             }
         }
     }

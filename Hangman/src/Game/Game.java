@@ -1,15 +1,14 @@
 package Game;
 
 import Drawing.Drawing;
-
 import java.util.Scanner;
 
 public class Game {
 
-    public static void startGame() {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Новая игра (Введите 'Y') /n Выйти (N)");
-    }
+//    public static void startGame() {
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Новая игра (Введите 'Y') /n Выйти (N)");
+//    }
 
     public static void printText(int lenWord, StringBuilder buildStr, StringBuilder buildErrorStr){
         System.out.printf("Ваше слово из %d букв: \n", lenWord);
